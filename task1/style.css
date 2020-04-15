@@ -1,0 +1,199 @@
+*{
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+}
+.search-form{
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin:30px 0 0 30px;
+}
+.search-title{
+    font-family: 'Arial';
+    display: flex;
+    align-items: flex-start;
+}
+.search-input{
+    width:500px;
+    margin-left:15px;
+    position:relative;
+}
+input#keyword{
+    position: relative;
+    width:100%;
+    padding:8px 3px;
+    font-size:15px;
+}
+input#keyword:focus{
+    outline: none;
+}
+/*
+input#keyword:focus ~ div#prefixbox-autocomplete-0 > div.prefixbox-autocomplete-container{
+    display:flex;
+}
+*/
+/*--------------------AUTOCOMPLETE------------------------*/
+
+.prefixbox-autocomplete-container {
+    margin: 0;
+    display: flex;
+    background-color: #fff;
+    border: 2px solid #fff;
+    box-sizing: border-box;
+    z-index: 62;
+    text-align: left;
+    box-shadow: 0 3px 12px #717171;
+    position: absolute;
+}
+   .prefixbox-autocomplete-container {
+        width: 100%;
+        top:44px;
+   }
+   
+   .prefixbox-autocomplete-container.open {
+        display: flex;
+        flex-direction:row;
+        align-items:flex-start;
+        justify-content: flex-start;
+    }
+   .prefixbox-autocomplete-container .col-1 {
+        width: 40%;
+        max-width: 40%;
+        flex: unset;
+    }
+    .prefixbox-autocomplete-container .col-2 {
+        width: 60%;
+        max-width: 60%;
+        flex: unset;
+    }
+
+.prefixbox-autocomplete-container .col-1, .prefixbox-autocomplete-container .col-2 {
+    padding:0;
+    background-color: black;
+}
+.prefixbox-autocomplete-container .col-2{
+    background:#fff;
+}
+
+.prefixbox-autocomplete-container .prefixbox-autocomplete-keyword-container {
+    padding: 10px 10px 10px 20px;
+    color: #000;
+    overflow: hidden;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+.prefixbox-autocomplete-container .prefixbox-autocomplete-keyword-container:hover {
+    background-color: #FB5104;
+}
+
+.prefixbox-group-2-title.pfbx-group-title {
+    display: block;
+    width: 100%;
+    color: #000;
+    text-align: center;
+    background-color: #E8E8E8;
+    padding: 20px;
+    text-align: left;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.prefixbox-autocomplete-product-container {
+    padding: 10px 10px;
+    color: #000;
+    transition:0.2s;
+    border:2px solid #fff;
+    margin-left:2px;
+}
+.prefixbox-autocomplete-left {
+    display: table-cell;
+    vertical-align: middle;
+    width: 23%;
+    min-width: 23%;
+    text-align: center;
+}
+
+.prefixbox-autocomplete-left img {
+    max-height: 70px;
+    max-width: 75px;
+}
+
+.prefixbox-autocomplete-body {
+    display: table-cell;
+    vertical-align: middle;
+    width: 10000px;
+    font-weight: bold;
+    cursor:default;
+    padding-left:10px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.prefixbox-autocomplete-body b {
+    font-weight: 500;
+}
+
+.prefixbox-autocomplete-right {
+    padding-left: 7px;
+    display: table-cell;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-align: center;
+    width: 16%;
+    font-weight: bold;
+    -webkit-column-rule: #000;
+    -moz-column-rule: #000;
+    -o-column-rule: #000;
+    column-rule: #000;
+    font-size: 18px;
+    color: #FB5104;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.oldPrice {
+    display: block;
+    font-size: 14px;
+    color: #A49E99;
+    text-decoration: line-through;
+}
+
+.prefixbox-autocomplete-product-container {
+    border: 2px solid #fff;
+    cursor: pointer;
+}
+
+.prefixbox-autocomplete-product-container:hover {
+    border-color: #FB5104;
+}
+
+.prefixbox-autocomplete-product-container:hover .prefixbox-autocomplete-product .prefixbox-autocomplete-body {
+    color: #FB5104;
+    cursor: pointer;
+}
+
+input {
+    border: 1px solid #A49E99;
+}
+
+/* media */
+
+@media (max-width: 768px) {
+    .prefixbox-autocomplete-container {
+        display: block;
+    }
+    .prefixbox-autocomplete-container.two-column .col-1,
+    .prefixbox-autocomplete-container.two-column .col-2 {
+        max-width: 100%;
+        width: 100%;
+    }
+    .search-title {
+        display: none;
+    }
+    .search-input {
+        width: 90%;
+    }
+}
+
